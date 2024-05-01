@@ -56,8 +56,8 @@ services:
         build:
             context: .
             dockerfile: apache.dockerfile
-        image: php8
-        container_name: php8site
+        image: php7
+        container_name: php7site
         volumes:
             - ./:/var/www/html
         ports:
