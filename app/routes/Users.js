@@ -5,6 +5,10 @@ const controller = require("../controllers/UserController");    // Import des do
 
 router.get('/', controller.get) 
 
+
+
+module.exports = router;                                        // Export du router
+
 /*
 router.get('/', (req, res) => {(
   Users.foreach(func))})
@@ -32,5 +36,3 @@ userRouter.get('/', async (req, res) => {
     }
 });
   }*/
-
-module.exports = router;                                        // Export du router
