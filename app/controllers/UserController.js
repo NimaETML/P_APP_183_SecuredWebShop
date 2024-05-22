@@ -18,15 +18,14 @@ const pool = require("../database/config");
     }
 };*/
 
-///////////// WADDAHELLL LLE LLWA
 module.exports = {
-  get: (req, res) => {
+  get: async (req, res) => {
     try {
-      const [users] = pool.query("SELECT * FROM t_user");
+      const [users] = await pool.query("SELECT * FROM t_user");
       res.json(users);
     } catch (error) {
-      console.error("Failed to retrieve users:", error);
-      res.status(500).send("Internal Server Error");
+      console.error("UserController Error:", error);
+      res.status(500).send("Failed to retrieve users:");
     }
   },
 };

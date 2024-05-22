@@ -4,7 +4,7 @@ const pool = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "root",
-  database: "placeholder_database",
+  database: "db_securedwebshop",
   connectTimeout: 60000,
   port: 6033,
 });
