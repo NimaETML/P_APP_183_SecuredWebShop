@@ -7,7 +7,7 @@ CREATE TABLE t_user(
    useId INT,
    useName VARCHAR(50),
    usePassword VARCHAR(50),
-   useRole VARCHAR(50),
+   isAdmin BOOLEAN,
    PRIMARY KEY(useId)
 );
 
@@ -24,3 +24,5 @@ CREATE TABLE t_cart(
    carProductLink INT,
    PRIMARY KEY(carId)
 );
+
+INSERT INTO `t_user` (`useId`, `useName`, `usePassword`, `isAdmin`) VALUES ('1', 'Nima', 'mdptopsecret', '1'), ('2', 'Sarah', 'mdpaussisecret', '0');

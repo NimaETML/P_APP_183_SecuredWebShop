@@ -1,13 +1,12 @@
-const express = require('express');                             // Import du module express
+const express = require("express"); // Import du module express
 
 const router = express.Router();
-const controller = require("../controllers/UserController");    // Import des données d'utilisateur
+const controller = require("../controllers/UserController"); // Import des données d'utilisateur
+const authVer = require("../auth/authVer");
 
-router.get('/', controller.get) 
+router.get("/", authVer, controller.get);
 
-
-
-module.exports = router;                                        // Export du router
+module.exports = router; // Export du router
 
 /*
 router.get('/', (req, res) => {(
